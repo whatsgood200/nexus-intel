@@ -213,46 +213,6 @@ Filter by "SPL Memo" program interactions, or check the **On-Chain** page in the
 
 On-chain USDC transfers are visible on Solscan under your wallet's token transfers.
 
----
-
-## X Post Template
-
-```
-Introducing Nexus Intel 🤖 — a fully autonomous crypto intelligence agent
-
-Every 6 hours it:
-→ Discovers tools via @OOBEonSol SAP mainnet
-→ Searches live crypto news (Ace Data Cloud)
-→ Generates 1,500-word analysis (GPT-4o via Ace)
-→ Creates AI cover art (Image Gen via Ace)
-→ Pays autonomously in USDC via x402
-→ Logs everything on Solana mainnet
-
-Zero human intervention. Real USDC payments. Verifiable on-chain.
-
-Built with: @solana @coral-xyz/anchor + official SAP SDK + @AceDataCloud SDK
-
-Bounty submission: @OOBEonSol × @AceDataCloud 🏆
-
-#Solana #AI #Web3 #AutonomousAgents #OOBE #AceDataCloud
-```
-
----
-
-## Demo Script
-
-1. **Show the dashboard** at http://localhost:5173 — agent idle, 0 cycles
-2. **Run: `RUN_ONCE=true npm start`** — watch the terminal, narrate each step
-3. **Switch to Dashboard** — show cycle timeline updating in real time
-4. **Open Reports page** — click the generated report to open it in full screen
-5. **Open On-Chain page** — show the memo TX, click through to Solscan
-6. **Show Solscan** — show the SPL Memo tx confirming on mainnet
-7. **Show Synapse Explorer** — show the registered agent profile
-
-Total demo time: ~5 minutes per cycle run.
-
----
-
 ## Project Structure
 
 ```
