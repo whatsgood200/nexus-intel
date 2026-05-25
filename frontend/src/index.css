@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0d0f1a;
+  --surface: #151828;
+  --surface-2: #1c2035;
+  --border: rgba(120, 130, 200, 0.15);
+  --accent: #6c63ff;
+  --green: #00c896;
+  --red: #ff4d6b;
+  --amber: #f59e0b;
+  --text: #e8eaf6;
+  --text-muted: #9094b0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(108, 99, 255, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 99, 255, 0.7);
+}
+
+.mono {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Courier New', monospace;
+}
+
+.badge-bullish {
+  background: rgba(0, 200, 150, 0.12);
+  color: #00c896;
+  border: 1px solid rgba(0, 200, 150, 0.3);
+}
+
+.badge-bearish {
+  background: rgba(255, 77, 107, 0.12);
+  color: #ff4d6b;
+  border: 1px solid rgba(255, 77, 107, 0.3);
+}
+
+.badge-neutral {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-success {
+  background: rgba(0, 200, 150, 0.12);
+  color: #00c896;
+  border: 1px solid rgba(0, 200, 150, 0.3);
+}
+
+.badge-failed {
+  background: rgba(255, 77, 107, 0.12);
+  color: #ff4d6b;
+  border: 1px solid rgba(255, 77, 107, 0.3);
+}
+
+.badge-running {
+  background: rgba(108, 99, 255, 0.12);
+  color: #6c63ff;
+  border: 1px solid rgba(108, 99, 255, 0.3);
+}
+
+.badge-partial {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}

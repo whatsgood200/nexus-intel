@@ -1,0 +1,42 @@
+module.exports = {
+  apps: [
+    {
+      name: 'nexus-intel-agent',
+      script: './src/agent.ts',
+      interpreter: 'node',
+      interpreter_args: '-r ts-node/register',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        IMMEDIATE: 'true',
+      },
+      error_file: './logs/pm2-error.log',
+      out_file: './logs/pm2-out.log',
+      kill_timeout: 60000,
+      restart_delay: 5000,
+      max_restarts: 20,
+      min_uptime: '30s',
+    },
+    {
+      name: 'nexus-intel-api',
+      script: './src/server/api.ts',
+      interpreter: 'node',
+      interpreter_args: '-r ts-node/register',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      env: {
+        NODE_ENV: 'production',
+      },
+      error_file: './logs/api-error.log',
+      out_file: './logs/api-out.log',
+      kill_timeout: 30000,
+      restart_delay: 3000,
+      max_restarts: 20,
+      min_uptime: '10s',
+    },
+  ],
+};

@@ -1,0 +1,48 @@
+{
+  "name": "nexus-intel",
+  "version": "1.0.0",
+  "description": "Autonomous crypto intelligence agent on Solana + Ace Data Cloud",
+  "main": "src/agent.ts",
+  "scripts": {
+    "start": "ts-node src/agent.ts",
+    "dev": "ts-node-dev --respawn src/agent.ts",
+    "register": "ts-node src/register-agent.ts",
+    "server": "ts-node src/server/api.ts",
+    "build": "tsc --outDir dist",
+    "typecheck": "tsc --noEmit",
+    "test-pipeline": "ts-node src/test-pipeline.ts",
+    "start:once": "cross-env RUN_ONCE=true ts-node src/agent.ts",
+    "start:immediate": "cross-env IMMEDIATE=true ts-node src/agent.ts"
+  },
+  "dependencies": {
+    "@oobe-protocol-labs/synapse-sap-sdk": "latest",
+    "@oobe-protocol-labs/synapse-client-sdk": "latest",
+    "@acedatacloud/sdk": "latest",
+    "@acedatacloud/x402-client": "latest",
+    "@coral-xyz/anchor": ">=0.30.0",
+    "@solana/web3.js": "^1.95.4",
+    "@solana/spl-token": "^0.4.9",
+    "axios": "^1.7.9",
+    "bs58": "^6.0.0",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.0",
+    "fs-extra": "^11.2.0",
+    "node-cron": "^3.0.3",
+    "uuid": "^11.0.5",
+    "winston": "^3.17.0",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.5",
+    "@types/node-cron": "^3.0.11",
+    "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}
